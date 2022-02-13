@@ -1,0 +1,22 @@
+{% load static %}
+
+
+<!doctype html>
+<html>
+    <head>
+        <title>My age on the planet Earth</title>
+        <link rel="stylesheet" href="{% static 'age/css/styles.css' %}" />
+    </head>
+
+    <body>
+        <div class="content">
+            <span class="timer" id="timer">00.0000000000</span>
+        </div>
+
+        <div class="footer">
+            Copyright© «My Age» 2022–2022. All rights reserved.
+        </div>
+	    <script src="{% static 'age/js/first.js' %}"></script>
+    </body>
+</html>
+

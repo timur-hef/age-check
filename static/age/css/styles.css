@@ -1,0 +1,43 @@
+@font-face {
+	src: url('/static/fonts/RobotoCondensed-Regular.ttf');
+	font-family:'RobotoCondensed';
+}
+
+body {
+	min-height: 100%;
+	background: #fff;
+	min-width: 320px;
+	font-size: 15px;
+	color: #112b46;
+}
+
+
+.content {
+	width: 100%;
+	margin-top: 15%;
+	text-align: center;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timer {
+	font-family: "Courier New", sans-serif;
+	font-size: 100px;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0;
+	margin: 10px 0;
+	display: block;
+}
+
+.footer {
+	bottom: 0;
+	margin: 10px 0;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	font-family: "RobotoCondensed", sans-serif;
+	font-weight: bold;
+}
