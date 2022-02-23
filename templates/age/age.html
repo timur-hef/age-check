@@ -6,11 +6,17 @@
     <head>
         <title>My age on the planet Earth</title>
         <link rel="stylesheet" href="{% static 'age/css/styles.css' %}" />
+        <link rel="icon" href="{% static 'age/favicon.ico' %">
     </head>
 
     <body>
         <div class="content">
-            <span class="timer" id="timer">00.0000000000</span>
+            <span class="timer" id="age" >00</span>
+            <span class="timer" id="decimal">00.0000000000</span>
+        </div>
+        
+        <div>
+            2022<progress value="0" max="100"></progress>2023
         </div>
 
         <div class="footer">
