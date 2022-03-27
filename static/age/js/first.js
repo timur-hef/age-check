@@ -3,12 +3,11 @@ let current_year;
 let next_year;
 let current_year_bd;
 let age, past, next;
-let i = 0;
+let i = 0.1;
 let res;
 let now;
-display_age = document.querySelector('#age');
-display_dec = document.querySelector('#decimal');
-progress_bar = document.querySelector('progress')
+display_age = document.querySelector('.timer');
+progress = document.querySelector('.progress_done');
 
 
 function start() {
@@ -29,12 +28,12 @@ function start() {
         }
 
         decimal = (now - past)/(next - past);
-        display_age.textContent = age;
-        display_dec.textContent = '.' + Math.round(decimal * (10 ** 10));
+        display_age.textContent = (Math.round((age + decimal) * (10 ** 10)) / (10 ** 10)).toFixed(10);
 
+        year_done = Math.round((now - prev_new_year) * 100 / (new Date(current_year + 1,0,1) - prev_new_year));
 
-        progress_bar.value = now - prev_new_year;
-        progress_bar.max = new Date(current_year + 1,0,1) - prev_new_year;
+        progress.style.width = year_done + '%';
+        progress.style.opacity = 1;
     }, 100);
 }
 
