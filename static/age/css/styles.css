@@ -53,11 +53,13 @@ body {
 	padding-right: 50px;
 	width: 28%;
 	display: table-cell;
+	color: #2855b4;
 }
 .right {
 	width: 28%;
 	padding-left: 50px;
 	display: table-cell;
+	color: #21ce5a;
 }
 .middle {
 	display: table-cell;

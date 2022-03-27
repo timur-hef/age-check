@@ -8,6 +8,8 @@ let res;
 let now;
 display_age = document.querySelector('.timer');
 progress = document.querySelector('.progress_done');
+left = document.querySelector('.left');
+right = document.querySelector('.right');
 
 
 function start() {
@@ -32,6 +34,8 @@ function start() {
 
         year_done = Math.round((now - prev_new_year) * 100 / (new Date(current_year + 1,0,1) - prev_new_year));
 
+        left.textContent = current_year
+        right.textContent = current_year + 1
         progress.style.width = year_done + '%';
         progress.style.opacity = 1;
     }, 100);
