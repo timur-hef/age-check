@@ -63,6 +63,18 @@ body {
 }
 .middle {
 	display: table-cell;
+	vertical-align: middle;
+    height: 100%;
+}
+.another_one{
+	height: 100%;
+}
+.percent {
+	font-size: 15px;
+	font-weight: 800;
+	text-align: center;
+	width: 100%;
+	padding-bottom: 1%;
 }
 .progress_bar {
 	background-color: #d4d1d1;
