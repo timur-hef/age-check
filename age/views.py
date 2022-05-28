@@ -1,3 +1,4 @@
+from django.contrib.auth import logout
 from django.shortcuts import render, redirect, reverse
 from django.views import View
 from django.http import HttpResponse
@@ -11,3 +12,7 @@ class AgeView(View):
             return render(request, 'age/age.html')
         else:
             return redirect(reverse("login"))
+
+    def post(self, request):
+        logout(request)
+        return redirect(reverse("login"))

@@ -5,11 +5,19 @@
 <html>
     <head>
         <title>My age on the planet Earth</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="{% static 'age/css/styles.css' %}" />
         <link rel="icon" href="{% static 'age/favicon.ico' %">
     </head>
 
     <body>
+        <form action="{% url 'age' %}" method="post">
+            {% csrf_token %}
+            <div class="logout">
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </div>
+        </form>
+
         <div class="content">
             <span class="timer">00.0000000000</span>
         </div>
@@ -31,5 +39,3 @@
 	    <script src="{% static 'age/js/first.js' %}"></script>
     </body>
 </html>
-
-<!-- 2022<progress value="0" max="100"></progress>2023 -->

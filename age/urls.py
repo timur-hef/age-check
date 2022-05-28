@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import AgeView
+from . import views
 
 
 urlpatterns = [
-    path('', AgeView.as_view(), name='age'),
+    path('', views.AgeView.as_view(), name='age'),
 ]
