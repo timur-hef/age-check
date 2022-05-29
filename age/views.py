@@ -22,3 +22,7 @@ class AgeView(View):
 def get_user_bday(request):
     user = User.objects.filter(username=request.user.username).get()
     return JsonResponse({'birthday': str(user.extenduser.birthday)})
+
+
+def test(request):
+    return render(request, 'age/test.html')
